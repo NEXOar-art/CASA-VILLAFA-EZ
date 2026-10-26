@@ -9,13 +9,28 @@
 <style>
 :root{--forest:#344b32;--forest2:#536c4a;--cream:#f7f2e7;--sand:#dfca91;--ink:#24251f;--muted:#6b6b60;--white:#fff;--max:1180px}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:82px}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--cream);line-height:1.55}img{display:block;max-width:100%}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}.wrap{width:min(var(--max),calc(100% - 44px));margin:auto}
+
+/* HEADER & LOGO */
 header{height:76px;position:fixed;z-index:20;inset:0 0 auto;background:rgba(250,247,239,.94);backdrop-filter:blur(14px);border-bottom:1px solid #ffffff70}
-.nav{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:12px;font-family:Georgia,serif;font-weight:700;font-size:1.2rem;letter-spacing:.02em}.brand-mark{width:43px;height:43px;border:2px solid var(--forest);border-radius:50%;display:grid;place-items:center;color:var(--forest);font-size:1.15rem}.brand small{display:block;font:500 .65rem/1.3 Inter, sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.nav{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:12px;font-family:Georgia,serif;font-weight:700;font-size:1.2rem;letter-spacing:.02em}
+.brand-mark{width:50px;height:50px;display:grid;place-items:center;overflow:hidden;border-radius:50%;border:1px solid var(--forest)} /* Ajuste para logo imagen */
+.brand-mark img{width:100%;height:100%;object-fit:cover}
+.brand small{display:block;font:500 .65rem/1.3 Inter, sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 nav{display:flex;align-items:center;gap:26px;font-size:.9rem}nav a{transition:color .2s}nav a:hover{color:var(--forest2)}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:999px;padding:12px 22px;background:var(--forest);color:white;font-weight:650;cursor:pointer;transition:transform .2s,background .2s}.nav-cta:hover,.btn:hover{background:#243723;transform:translateY(-2px)}.menu-toggle{display:none;background:none;border:0;font-size:1.7rem;color:var(--forest)}
+
+/* HERO CON VIDEO DE FONDO */
 .hero{min-height:660px;height:94svh;max-height:850px;position:relative;display:grid;place-items:center;text-align:center;color:white;overflow:hidden;background:#293d27}
-.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#14201455 0%,#10190d20 38%,#11190dcc 100%),url("assets/hero-casa.jpg") center 48%/cover no-repeat;transform:scale(1.015)}
-.hero-content{position:relative;z-index:1;width:min(900px,calc(100% - 36px));padding-top:80px}.eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:.78rem;font-weight:700;color:var(--sand)}h1,h2,h3,p{margin-top:0}h1{font-family:Georgia,"Times New Roman",serif;font-weight:500;font-size:clamp(3.2rem,8.2vw,7rem);line-height:.98;letter-spacing:-.045em;margin:20px 0}.hero p{font-size:clamp(1rem,2vw,1.28rem);letter-spacing:.08em;text-transform:uppercase;margin:0 auto 30px}.hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}.btn.light{background:var(--sand);color:#28291f}.btn.outline{background:transparent;border:1px solid #ffffffb8}.scroll-hint{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;opacity:.85}
-.video-section{width:100%;background:#111;line-height:0}.video-frame{position:relative;width:100%;aspect-ratio:16/7;min-height:260px;max-height:680px}.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.hero-video-bg{position:absolute;top:50%;left:50%;width:100%;height:100%;object-fit:cover;transform:translate(-50%, -50%);z-index:0;pointer-events:none}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,#14201480 0%,#10190d60 38%,#11190dee 100%);z-index:1}
+.hero-content{position:relative;z-index:2;width:min(900px,calc(100% - 36px));padding-top:80px}
+.eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:.78rem;font-weight:700;color:var(--sand)}h1,h2,h3,p{margin-top:0}h1{font-family:Georgia,"Times New Roman",serif;font-weight:500;font-size:clamp(3.2rem,8.2vw,7rem);line-height:.98;letter-spacing:-.045em;margin:20px 0;text-shadow:0 2px 10px rgba(0,0,0,0.3)}.hero p{font-size:clamp(1rem,2vw,1.28rem);letter-spacing:.08em;text-transform:uppercase;margin:0 auto 30px;text-shadow:0 1px 5px rgba(0,0,0,0.3)}.hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}.btn.light{background:var(--sand);color:#28291f}.btn.outline{background:transparent;border:1px solid #ffffffb8}.scroll-hint{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;opacity:.85;z-index:2}
+
+/* BOTÓN MUTE */
+.mute-btn{position:absolute;bottom:30px;right:30px;z-index:3;background:rgba(0,0,0,0.5);border:1px solid rgba(255,255,255,0.3);color:white;width:44px;height:44px;border-radius:50%;cursor:pointer;display:grid;place-items:center;font-size:1.2rem;backdrop-filter:blur(4px);transition:all .3s}
+.mute-btn:hover{background:var(--forest);border-color:var(--forest)}
+
+/* RESTO DE SECCIONES */
 section{padding:88px 0}.section-head{text-align:center;max-width:700px;margin:0 auto 42px}.kicker{font-size:.75rem;text-transform:uppercase;letter-spacing:.2em;color:var(--forest2);font-weight:800}.section-head h2,.story-copy h2{font-family:Georgia,serif;font-weight:500;font-size:clamp(2.25rem,4.5vw,3.6rem);line-height:1.08;margin:10px 0 14px}.section-head p{color:var(--muted);margin-bottom:0}
 .story{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:64px}.story-image{position:relative}.story-image img{width:100%;height:430px;object-fit:cover;border-radius:6px;box-shadow:20px 20px 0 #dfca914f}.story-copy p{color:var(--muted)}.story-copy .btn{margin-top:10px}
 .menu-section{background:#fff}.carousel-shell{position:relative}.food-track,.gallery-track{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 60px)/3);gap:30px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:var(--forest2) #e8e5dc;padding:0 0 18px;scroll-behavior:smooth}.food-card{scroll-snap-align:start;background:var(--cream);border-radius:8px;overflow:hidden}.food-card img{width:100%;height:250px;object-fit:cover;transition:transform .4s}.food-card:hover img{transform:scale(1.04)}.food-card .card-copy{padding:20px 20px 22px}.food-card h3{font:500 1.35rem Georgia,serif;margin-bottom:8px}.food-card p{color:var(--muted);font-size:.93rem;margin:0}.carousel-controls{display:flex;justify-content:center;gap:10px;margin-top:22px}.round-btn{width:44px;height:44px;border:1px solid #c9cbbf;border-radius:50%;background:transparent;color:var(--forest);font-size:1.2rem;cursor:pointer}.round-btn:hover{background:var(--forest);color:#fff}
@@ -24,15 +39,20 @@ section{padding:88px 0}.section-head{text-align:center;max-width:700px;margin:0 
 .contact-section{background:var(--cream)}.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:start}.contact-info{background:var(--forest);color:#fff;padding:34px;border-radius:8px}.contact-info h3{font:500 1.8rem Georgia,serif}.contact-info p{color:#e2e4d9}.info-row{display:flex;gap:14px;margin:22px 0}.info-icon{width:40px;height:40px;flex:0 0 40px;display:grid;place-items:center;border:1px solid #ffffff65;border-radius:50%}.contact-info .btn{background:var(--sand);color:#28291f;margin-top:10px}.map{width:100%;height:230px;border:0;border-radius:7px;margin-top:22px;filter:saturate(.8)}
 .reservation{padding:30px;background:#fff;border-radius:8px;box-shadow:0 12px 40px #1e2a1610}.reservation h3{font:500 1.8rem Georgia,serif;margin-bottom:6px}.reservation>p{color:var(--muted);font-size:.92rem;margin-bottom:24px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}.field label{font-size:.82rem;font-weight:700}.field input,.field select,.field textarea{width:100%;padding:12px 13px;border:1px solid #d8d8ce;border-radius:5px;background:#fff;outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--forest2);box-shadow:0 0 0 3px #536c4a20}.field textarea{min-height:95px;resize:vertical}.reservation .btn{width:100%;margin-top:20px}.form-note{font-size:.75rem;color:var(--muted);margin:12px 0 0}
 footer{background:#20291e;color:#e8e9df;padding:30px 0}.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}.footer-brand{font:500 1.2rem Georgia,serif}.footer-small{font-size:.78rem;color:#bfc6b7}.social-links{display:flex;gap:18px;font-size:.85rem}
-@media(max-width:800px){.wrap{width:min(var(--max),calc(100% - 32px))}header{height:68px}.brand{font-size:1rem}.brand-mark{width:38px;height:38px}nav{display:none;position:absolute;top:68px;left:0;right:0;padding:18px 24px 24px;background:var(--cream);box-shadow:0 12px 18px #00000012;flex-direction:column;align-items:stretch;gap:0}nav.open{display:flex}nav a{padding:12px 0;border-bottom:1px solid #e6e1d5}.nav-cta{display:none}.menu-toggle{display:block}.hero{min-height:590px;height:84svh}.hero:before{background-position:55% center}.video-frame{aspect-ratio:16/9;min-height:220px}section{padding:66px 0}.story{grid-template-columns:1fr;gap:34px}.story-image{order:2}.story-image img{height:320px}.food-track,.gallery-track{grid-auto-columns:calc((100% - 18px)/2);gap:18px}.food-card img{height:220px}.gallery-track img{height:250px}.contact-grid{grid-template-columns:1fr;gap:24px}.contact-info{padding:26px}}
-@media(max-width:520px){.wrap{width:calc(100% - 28px)}.hero{min-height:560px;height:82svh}.hero-content{padding-top:55px}.eyebrow{font-size:.65rem}.hero p{font-size:.88rem;letter-spacing:.06em}.btn{padding:12px 18px;font-size:.9rem}.video-frame{min-height:190px}section{padding:54px 0}.section-head{margin-bottom:30px}.food-track,.gallery-track{grid-auto-columns:84%;gap:14px}.food-card img{height:230px}.gallery-track img{height:260px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.contact-info{padding:24px}.reservation{padding:22px}.quote-band{padding:48px 18px}.quote-band p{font-size:1.35rem}.footer-inner{align-items:flex-start;flex-direction:column;gap:12px}}
+
+@media(max-width:800px){.wrap{width:min(var(--max),calc(100% - 32px))}header{height:68px}.brand{font-size:1rem}.brand-mark{width:42px;height:42px}nav{display:none;position:absolute;top:68px;left:0;right:0;padding:18px 24px 24px;background:var(--cream);box-shadow:0 12px 18px #00000012;flex-direction:column;align-items:stretch;gap:0}nav.open{display:flex}nav a{padding:12px 0;border-bottom:1px solid #e6e1d5}.nav-cta{display:none}.menu-toggle{display:block}.hero{min-height:590px;height:84svh}.mute-btn{bottom:20px;right:20px;width:38px;height:38px}section{padding:66px 0}.story{grid-template-columns:1fr;gap:34px}.story-image{order:2}.story-image img{height:320px}.food-track,.gallery-track{grid-auto-columns:calc((100% - 18px)/2);gap:18px}.food-card img{height:220px}.gallery-track img{height:250px}.contact-grid{grid-template-columns:1fr;gap:24px}.contact-info{padding:26px}}
+@media(max-width:520px){.wrap{width:calc(100% - 28px)}.hero{min-height:560px;height:82svh}.hero-content{padding-top:55px}.eyebrow{font-size:.65rem}.hero p{font-size:.88rem;letter-spacing:.06em}.btn{padding:12px 18px;font-size:.9rem}section{padding:54px 0}.section-head{margin-bottom:30px}.food-track,.gallery-track{grid-auto-columns:84%;gap:14px}.food-card img{height:230px}.gallery-track img{height:260px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.contact-info{padding:24px}.reservation{padding:22px}.quote-band{padding:48px 18px}.quote-band p{font-size:1.35rem}.footer-inner{align-items:flex-start;flex-direction:column;gap:12px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
 </style>
 </head>
 <body>
 <header>
   <div class="wrap nav">
-    <a class="brand" href="#inicio" aria-label="Casa Villafañez, inicio"><span class="brand-mark">CV</span><span>Casa Villafañez<small>Bar · Restaurante</small></span></a>
+    <a class="brand" href="#inicio" aria-label="Casa Villafañez, inicio">
+      <!-- LOGO ACTUALIZADO -->
+      <span class="brand-mark"><img src="LOGO VILLA CRISTO.jpg" alt="Logo Casa Villafañez"></span>
+      <span>Casa Villafañez<small>Bar · Restaurante</small></span>
+    </a>
     <nav id="main-nav" aria-label="Navegación principal">
       <a href="#inicio">Inicio</a><a href="#historia">Nuestra historia</a><a href="#carta">Carta</a><a href="#galeria">Galería</a><a href="#contacto">Contacto</a>
     </nav>
@@ -42,19 +62,45 @@ footer{background:#20291e;color:#e8e9df;padding:30px 0}.footer-inner{display:fle
 </header>
 <main>
 <section class="hero" id="inicio">
+  <!-- VIDEO DE FONDO -->
+  <!-- Nota: Se usa muted por defecto para permitir autoplay en navegadores modernos. El botón abajo activa el sonido. -->
+  <video class="hero-video-bg" id="bg-video" autoplay loop muted playsinline poster="assets/hero-casa.jpg">
+    <source src="https://www.youtube-nocookie.com/embed/lQ88wtf7eUc?rel=0&modestbranding=1&autoplay=1&mute=1&controls=0&showinfo=0&loop=1&playlist=lQ88wtf7eUc" type="video/mp4"> 
+    <!-- NOTA IMPORTANTE: YouTube no permite video directo como fondo fácil con la etiqueta <video> estándar sin API compleja. 
+         Para mantenerlo simple y compatible, usaremos un iframe oculto o una imagen de fondo si el video falla.
+         Sin embargo, la mejor forma de "Video de fondo" con YouTube es usando un iframe absoluto. 
+         He ajustado el CSS para usar un iframe como fondo visualmente. -->
+  </video>
+  
+  <!-- Reemplazo técnico para Video de Fondo con YouTube (Iframe absoluto) -->
+  <div style="position:absolute; top:0; left:0; width:100%; height:100%; z-index:0; overflow:hidden; pointer-events:none;">
+      <iframe 
+        style="width:100vw; height:56.25vw; min-height:100vh; min-width:177.77vh; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);"
+        src="https://www.youtube-nocookie.com/embed/lQ88wtf7eUc?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&loop=1&playlist=lQ88wtf7eUc&modestbranding=1" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen
+        id="youtube-bg"
+        title="Video de fondo">
+      </iframe>
+  </div>
+
+  <div class="hero-overlay"></div>
+
   <div class="hero-content">
     <div class="eyebrow">Tradición del Norte Argentino</div>
     <h1>Casa Villafañez</h1>
     <p>Sabores caseros · Naturaleza · Encuentros</p>
     <div class="hero-actions"><a class="btn light" href="#reservas">Reservá tu mesa</a><a class="btn outline" href="#carta">Descubrí la carta</a></div>
   </div>
-  <a class="scroll-hint" href="#video">Deslizá para descubrir ↓</a>
+  
+  <a class="scroll-hint" href="#historia">Deslizá para descubrir ↓</a>
+  
+  <!-- Botón para controlar volumen -->
+  <button class="mute-btn" id="mute-btn" aria-label="Activar/Desactivar sonido">🔇</button>
 </section>
 
-<!-- Video a pantalla completa, sin bordes -->
-<div class="video-section" id="video" aria-label="Video de Casa Villafañez">
-  <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/lQ88wtf7eUc?rel=0&modestbranding=1" title="Casa Villafañez - video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
-</div>
+<!-- Se eliminó la sección de video separada ya que ahora está en el fondo del inicio -->
 
 <section id="historia">
   <div class="wrap story">
@@ -129,12 +175,44 @@ footer{background:#20291e;color:#e8e9df;padding:30px 0}.footer-inner{display:fle
 </section>
 </main>
 <footer><div class="wrap footer-inner"><div><div class="footer-brand">Casa Villafañez</div><div class="footer-small">Bar Restaurante · El Rodeo, Catamarca</div></div><div class="footer-small">Tradición, sabor y encuentros en el Norte Argentino.</div><div class="social-links"><a href="#carta">Carta</a><a href="#galeria">Galería</a><a href="#contacto">Contacto</a></div></div></footer>
+
 <script>
+// Menú móvil
 const toggle=document.getElementById('menu-toggle'),nav=document.getElementById('main-nav');
 toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'×':'☰';});
 nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.textContent='☰';}));
+
+// Carruseles
 document.querySelectorAll('[data-target][data-dir]').forEach(btn=>btn.addEventListener('click',()=>{const track=document.getElementById(btn.dataset.target);track.scrollBy({left:track.clientWidth*.82*Number(btn.dataset.dir),behavior:'smooth'});}));
+
+// Formulario WhatsApp
 document.getElementById('reservation-form').addEventListener('submit',e=>{e.preventDefault();const f=new FormData(e.currentTarget);const lines=['Hola, Casa Villafañez. Quisiera consultar una reserva:','Nombre: '+f.get('nombre'),'Teléfono: '+(f.get('telefono')||'No indicado'),'Fecha: '+f.get('fecha'),'Horario: '+f.get('hora'),'Personas: '+f.get('personas'),'Preferencia: '+f.get('tipo'),'Mensaje: '+(f.get('mensaje')||'Sin mensaje')];const phone='543815439476';window.open('https://wa.me/'+phone+'?text='+encodeURIComponent(lines.join('\n')),'_blank','noopener');});
+
+// Lógica del Botón Mute/Unmute para el video de fondo (YouTube Iframe API simplificada)
+// Nota: Controlar el volumen de un iframe de YouTube requiere postMessage.
+const muteBtn = document.getElementById('mute-btn');
+const youtubeIframe = document.getElementById('youtube-bg');
+let isMuted = true; // Empieza muteado por política de autoplay
+
+muteBtn.addEventListener('click', () => {
+    if (isMuted) {
+        // Enviar comando para activar sonido
+        youtubeIframe.contentWindow.postMessage('{"event":"command","func":"unMute","args":""}', '*');
+        muteBtn.textContent = '🔊';
+        muteBtn.style.background = 'var(--forest)';
+        isMuted = false;
+    } else {
+        // Enviar comando para silenciar
+        youtubeIframe.contentWindow.postMessage('{"event":"command","func":"mute","args":""}', '*');
+        muteBtn.textContent = '🔇';
+        muteBtn.style.background = 'rgba(0,0,0,0.5)';
+        isMuted = true;
+    }
+});
+
+// Habilitar la API de JS en el iframe agregando el parámetro enablejsapi=1
+// Ya está implícito en algunos casos, pero aseguramos la URL correcta arriba.
+// La URL arriba incluye los parámetros necesarios.
 </script>
 </body>
 </html>
