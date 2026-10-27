@@ -11,30 +11,35 @@
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:82px}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--cream);line-height:1.55}img{display:block;max-width:100%}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}.wrap{width:min(var(--max),calc(100% - 44px));margin:auto}
 .sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 
-/* HEADER & LOGO (contenedor más grande) */
+/* HEADER & LOGO (contenedor óvalo más grande, imagen ajustada) */
 header{height:76px;position:fixed;z-index:20;inset:0 0 auto;background:rgba(250,247,239,.94);backdrop-filter:blur(14px);border-bottom:1px solid #ffffff70}
 .nav{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}
 .brand{display:flex;align-items:center;gap:12px;font-family:Georgia,serif;font-weight:700;font-size:1.2rem;letter-spacing:.02em}
-.brand-mark{width:64px;height:64px;flex:0 0 64px;display:grid;place-items:center;overflow:hidden;border-radius:50%;background:#fff;border:1px solid #e6e0d0;box-shadow:0 2px 10px #1e2a1614;padding:5px}
-.brand-mark img{width:100%;height:100%;object-fit:contain}
+.brand-mark{width:52px;height:70px;flex:0 0 52px;display:grid;place-items:center;overflow:hidden;border-radius:50%;background:#fff;border:1px solid #e6e0d0;box-shadow:0 2px 10px #1e2a1614;padding:3px}
+.brand-mark img{width:100%;height:100%;object-fit:cover;border-radius:50%}
 .brand small{display:block;font:500 .65rem/1.3 Inter, sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 nav{display:flex;align-items:center;gap:26px;font-size:.9rem}nav a{transition:color .2s}nav a:hover{color:var(--forest2)}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:999px;padding:12px 22px;background:var(--forest);color:white;font-weight:650;cursor:pointer;transition:transform .2s,background .2s}.nav-cta:hover,.btn:hover{background:#243723;transform:translateY(-2px)}.menu-toggle{display:none;background:none;border:0;font-size:1.7rem;color:var(--forest)}
 
-/* HERO CON VIDEO DE FONDO EN MÁXIMA CALIDAD */
+/* HERO CON VIDEO DE FONDO EN CALIDAD MÁXIMA */
 .hero{min-height:660px;height:94svh;max-height:850px;position:relative;display:grid;place-items:center;text-align:center;color:white;overflow:hidden;background:#293d27}
 .video-bg{position:absolute;inset:0;overflow:hidden;z-index:0;pointer-events:none}
 .video-bg iframe{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:max(100vw,177.78vh);height:max(56.25vw,100vh);border:0}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,24,13,.42) 0%,rgba(16,24,13,.28) 40%,rgba(13,18,10,.88) 100%);z-index:1}
 .hero-content{position:relative;z-index:2;width:min(900px,calc(100% - 36px));padding-top:80px}
-.eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:.78rem;font-weight:700;color:var(--sand)}h1,h2,h3,p{margin-top:0}h1{font-family:Georgia,"Times New Roman",serif;font-weight:500;font-size:clamp(3.2rem,8.2vw,7rem);line-height:.98;letter-spacing:-.045em;margin:20px 0;text-shadow:0 2px 10px rgba(0,0,0,0.3)}.hero p{font-size:clamp(1.05rem,2.2vw,1.4rem);letter-spacing:.1em;text-transform:uppercase;margin:0 auto 30px;text-shadow:0 1px 6px rgba(0,0,0,.45)}.hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}.btn.light{background:var(--sand);color:#28291f}.btn.outline{background:transparent;border:1px solid #ffffffb8}.scroll-hint{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;opacity:.85;z-index:2}
+.eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:.78rem;font-weight:700;color:var(--sand)}h1,h2,h3,p{margin-top:0}h1{font-family:Georgia,"Times New Roman",serif;font-weight:500;font-size:clamp(3.2rem,8.2vw,7rem);line-height:.98;letter-spacing:-.045em;margin:20px 0;text-shadow:0 2px 10px rgba(0,0,0,0.3)}.hero p{font-size:clamp(.95rem,1.8vw,1.15rem);letter-spacing:.14em;text-transform:uppercase;margin:26px auto 0;text-shadow:0 1px 6px rgba(0,0,0,.45);opacity:.95}.hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}.btn.light{background:var(--sand);color:#28291f}.btn.outline{background:transparent;border:1px solid #ffffffb8}.scroll-hint{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;opacity:.85;z-index:2}
 
-/* CONTROL DE SONIDO (lugar inteligente: esquina inferior derecha del hero) */
-.sound-toggle{position:absolute;right:26px;bottom:26px;z-index:3;display:inline-flex;align-items:center;gap:10px;padding:11px 18px;border-radius:999px;border:1px solid #ffffff4d;background:#10180dcc;backdrop-filter:blur(10px);color:#fff;cursor:pointer;font-size:.8rem;font-weight:650;letter-spacing:.06em;text-transform:uppercase;transition:background .25s,transform .2s}
-.sound-toggle:hover{background:var(--forest);transform:translateY(-2px)}
+/* CONTROL DE SONIDO + RANGO DE VOLUMEN */
+.sound-control{position:absolute;right:26px;bottom:26px;z-index:3;display:flex;align-items:center;gap:12px;padding:10px 16px;border-radius:999px;border:1px solid #ffffff4d;background:#10180dcc;backdrop-filter:blur(10px)}
+.sound-toggle{display:inline-flex;align-items:center;gap:8px;background:none;border:0;color:#fff;cursor:pointer;font-size:.78rem;font-weight:650;letter-spacing:.06em;text-transform:uppercase;padding:2px;transition:color .2s}
+.sound-toggle:hover{color:var(--sand)}
 .sound-toggle svg{width:20px;height:20px;fill:currentColor;flex:0 0 20px}
 .sound-toggle .icon-on{display:none}
 .sound-toggle.unmuted .icon-on{display:block}
 .sound-toggle.unmuted .icon-off{display:none}
+.sound-control input[type=range]{-webkit-appearance:none;appearance:none;width:110px;height:5px;border-radius:999px;background:rgba(255,255,255,.35);outline:none;cursor:pointer}
+.sound-control input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:15px;height:15px;border-radius:50%;background:var(--sand);border:2px solid #fff;box-shadow:0 1px 4px #00000066}
+.sound-control input[type=range]::-moz-range-thumb{width:15px;height:15px;border-radius:50%;background:var(--sand);border:2px solid #fff;box-shadow:0 1px 4px #00000066}
+.sound-control input[type=range]:focus-visible{box-shadow:0 0 0 3px #dfca9155}
 
 /* RESTO DE SECCIONES (sin cambios) */
 section{padding:88px 0}.section-head{text-align:center;max-width:700px;margin:0 auto 42px}.kicker{font-size:.75rem;text-transform:uppercase;letter-spacing:.2em;color:var(--forest2);font-weight:800}.section-head h2,.story-copy h2{font-family:Georgia,serif;font-weight:500;font-size:clamp(2.25rem,4.5vw,3.6rem);line-height:1.08;margin:10px 0 14px}.section-head p{color:var(--muted);margin-bottom:0}
@@ -46,8 +51,8 @@ section{padding:88px 0}.section-head{text-align:center;max-width:700px;margin:0 
 .reservation{padding:30px;background:#fff;border-radius:8px;box-shadow:0 12px 40px #1e2a1610}.reservation h3{font:500 1.8rem Georgia,serif;margin-bottom:6px}.reservation>p{color:var(--muted);font-size:.92rem;margin-bottom:24px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}.field label{font-size:.82rem;font-weight:700}.field input,.field select,.field textarea{width:100%;padding:12px 13px;border:1px solid #d8d8ce;border-radius:5px;background:#fff;outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--forest2);box-shadow:0 0 0 3px #536c4a20}.field textarea{min-height:95px;resize:vertical}.reservation .btn{width:100%;margin-top:20px}.form-note{font-size:.75rem;color:var(--muted);margin:12px 0 0}
 footer{background:#20291e;color:#e8e9df;padding:30px 0}.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}.footer-brand{font:500 1.2rem Georgia,serif}.footer-small{font-size:.78rem;color:#bfc6b7}.social-links{display:flex;gap:18px;font-size:.85rem}
 
-@media(max-width:800px){.wrap{width:min(var(--max),calc(100% - 32px))}header{height:68px}.brand{font-size:1rem}.brand-mark{width:54px;height:54px;flex-basis:54px;padding:4px}nav{display:none;position:absolute;top:68px;left:0;right:0;padding:18px 24px 24px;background:var(--cream);box-shadow:0 12px 18px #00000012;flex-direction:column;align-items:stretch;gap:0}nav.open{display:flex}nav a{padding:12px 0;border-bottom:1px solid #e6e1d5}.nav-cta{display:none}.menu-toggle{display:block}.hero{min-height:590px;height:84svh}.sound-toggle{right:18px;bottom:18px;padding:9px 15px;font-size:.72rem}.sound-toggle svg{width:17px;height:17px;flex-basis:17px}section{padding:66px 0}.story{grid-template-columns:1fr;gap:34px}.story-image{order:2}.story-image img{height:320px}.food-track,.gallery-track{grid-auto-columns:calc((100% - 18px)/2);gap:18px}.food-card img{height:220px}.gallery-track img{height:250px}.contact-grid{grid-template-columns:1fr;gap:24px}.contact-info{padding:26px}}
-@media(max-width:520px){.wrap{width:calc(100% - 28px)}.brand-mark{width:46px;height:46px;flex-basis:46px;padding:3px}.hero{min-height:560px;height:82svh}.hero-content{padding-top:55px}.eyebrow{font-size:.65rem}.hero p{font-size:.9rem;letter-spacing:.06em}.btn{padding:12px 18px;font-size:.9rem}section{padding:54px 0}.section-head{margin-bottom:30px}.food-track,.gallery-track{grid-auto-columns:84%;gap:14px}.food-card img{height:230px}.gallery-track img{height:260px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.contact-info{padding:24px}.reservation{padding:22px}.quote-band{padding:48px 18px}.quote-band p{font-size:1.35rem}.footer-inner{align-items:flex-start;flex-direction:column;gap:12px}}
+@media(max-width:800px){.wrap{width:min(var(--max),calc(100% - 32px))}header{height:68px}.brand{font-size:1rem}.brand-mark{width:46px;height:62px;flex-basis:46px;padding:2px}nav{display:none;position:absolute;top:68px;left:0;right:0;padding:18px 24px 24px;background:var(--cream);box-shadow:0 12px 18px #00000012;flex-direction:column;align-items:stretch;gap:0}nav.open{display:flex}nav a{padding:12px 0;border-bottom:1px solid #e6e1d5}.nav-cta{display:none}.menu-toggle{display:block}.hero{min-height:590px;height:84svh}.sound-control{right:18px;bottom:18px;padding:8px 12px;gap:10px}.sound-control input[type=range]{width:90px}.sound-toggle{font-size:.7rem}.sound-toggle svg{width:17px;height:17px;flex-basis:17px}section{padding:66px 0}.story{grid-template-columns:1fr;gap:34px}.story-image{order:2}.story-image img{height:320px}.food-track,.gallery-track{grid-auto-columns:calc((100% - 18px)/2);gap:18px}.food-card img{height:220px}.gallery-track img{height:250px}.contact-grid{grid-template-columns:1fr;gap:24px}.contact-info{padding:26px}}
+@media(max-width:520px){.wrap{width:calc(100% - 28px)}.brand-mark{width:40px;height:54px;flex-basis:40px;padding:2px}.hero{min-height:560px;height:82svh}.hero-content{padding-top:55px}.eyebrow{font-size:.65rem}.hero p{font-size:.85rem;letter-spacing:.08em}.btn{padding:12px 18px;font-size:.9rem}.sound-toggle .label{display:none}.sound-control input[type=range]{width:80px}section{padding:54px 0}.section-head{margin-bottom:30px}.food-track,.gallery-track{grid-auto-columns:84%;gap:14px}.food-card img{height:230px}.gallery-track img{height:260px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.contact-info{padding:24px}.reservation{padding:22px}.quote-band{padding:48px 18px}.quote-band p{font-size:1.35rem}.footer-inner{align-items:flex-start;flex-direction:column;gap:12px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
 </style>
 </head>
@@ -67,10 +72,10 @@ footer{background:#20291e;color:#e8e9df;padding:30px 0}.footer-inner{display:fle
 </header>
 <main>
 <section class="hero" id="inicio">
-  <!-- Video de fondo en máxima calidad (vq=hd1080 + enablejsapi para el control de sonido) -->
+  <!-- Video de fondo: vq=highres pide la máxima resolución disponible + enablejsapi para control de volumen -->
   <div class="video-bg" aria-hidden="true">
     <iframe id="youtube-bg"
-      src="https://www.youtube-nocookie.com/embed/lQ88wtf7eUc?autoplay=1&mute=1&controls=0&rel=0&loop=1&playlist=lQ88wtf7eUc&modestbranding=1&enablejsapi=1&iv_load_policy=3&disablekb=1&fs=0&playsinline=1&vq=hd1080"
+      src="https://www.youtube-nocookie.com/embed/lQ88wtf7eUc?autoplay=1&mute=1&controls=0&rel=0&loop=1&playlist=lQ88wtf7eUc&modestbranding=1&enablejsapi=1&iv_load_policy=3&disablekb=1&fs=0&playsinline=1&vq=highres"
       title="Video de fondo de Casa Villafañez"
       allow="autoplay; encrypted-media; picture-in-picture"
       referrerpolicy="strict-origin-when-cross-origin"
@@ -80,18 +85,21 @@ footer{background:#20291e;color:#e8e9df;padding:30px 0}.footer-inner{display:fle
 
   <div class="hero-content">
     <h1 class="sr-only">Casa Villafañez · Bar Restaurante en El Rodeo, Catamarca</h1>
-    <p>Sabores caseros · Naturaleza · Encuentros</p>
     <div class="hero-actions"><a class="btn light" href="#reservas">Reservá tu mesa</a><a class="btn outline" href="#carta">Descubrí la carta</a></div>
+    <p>Sabores caseros · Naturaleza · Encuentros</p>
   </div>
 
   <a class="scroll-hint" href="#historia">Deslizá para descubrir ↓</a>
 
-  <!-- Control de sonido del video -->
-  <button class="sound-toggle" id="sound-toggle" type="button" aria-pressed="false" aria-label="Activar o silenciar el sonido del video">
-    <svg class="icon-off" viewBox="0 0 24 24" aria-hidden="true"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3 3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4 9.91 6.09 12 8.18V4z"/></svg>
-    <svg class="icon-on" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
-    <span class="label">Activar sonido</span>
-  </button>
+  <!-- Control de sonido + rango dinámico de volumen -->
+  <div class="sound-control" id="sound-control">
+    <button class="sound-toggle" id="sound-toggle" type="button" aria-pressed="false" aria-label="Activar o silenciar el sonido del video">
+      <svg class="icon-off" viewBox="0 0 24 24" aria-hidden="true"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3 3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4 9.91 6.09 12 8.18V4z"/></svg>
+      <svg class="icon-on" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+      <span class="label">Activar sonido</span>
+    </button>
+    <input type="range" id="volume-range" min="0" max="100" step="1" value="0" aria-label="Volumen del video">
+  </div>
 </section>
 
 <section id="historia">
@@ -174,18 +182,27 @@ nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classLi
 document.querySelectorAll('[data-target][data-dir]').forEach(btn=>btn.addEventListener('click',()=>{const track=document.getElementById(btn.dataset.target);track.scrollBy({left:track.clientWidth*.82*Number(btn.dataset.dir),behavior:'smooth'});}));
 document.getElementById('reservation-form').addEventListener('submit',e=>{e.preventDefault();const f=new FormData(e.currentTarget);const lines=['Hola, Casa Villafañez. Quisiera consultar una reserva:','Nombre: '+f.get('nombre'),'Teléfono: '+(f.get('telefono')||'No indicado'),'Fecha: '+f.get('fecha'),'Horario: '+f.get('hora'),'Personas: '+f.get('personas'),'Preferencia: '+f.get('tipo'),'Mensaje: '+(f.get('mensaje')||'Sin mensaje')];const phone='543815439476';window.open('https://wa.me/'+phone+'?text='+encodeURIComponent(lines.join('\n')),'_blank','noopener');});
 
-/* Control de sonido del video de fondo (YouTube IFrame API vía postMessage) */
+/* Control de sonido + rango dinámico de volumen (YouTube IFrame API vía postMessage) */
 const soundBtn=document.getElementById('sound-toggle');
+const volRange=document.getElementById('volume-range');
 const bgIframe=document.getElementById('youtube-bg');
-let videoMuted=true; /* inicia muteado: requisito de autoplay de los navegadores */
-const sendCmd=func=>bgIframe.contentWindow.postMessage(JSON.stringify({event:'command',func:func,args:[]}),'*');
-soundBtn.addEventListener('click',()=>{
-  videoMuted=!videoMuted;
-  sendCmd(videoMuted?'mute':'unMute');
-  soundBtn.classList.toggle('unmuted',!videoMuted);
-  soundBtn.setAttribute('aria-pressed',String(!videoMuted));
-  soundBtn.querySelector('.label').textContent=videoMuted?'Activar sonido':'Silenciar';
+let videoMuted=true;   /* inicia muteado: requisito de autoplay de los navegadores */
+let lastVol=70;        /* último volumen usado para restaurar al desmutear */
+const sendCmd=(func,args=[])=>bgIframe.contentWindow.postMessage(JSON.stringify({event:'command',func:func,args:args}),'*');
+const paintRange=()=>{const v=+volRange.value;volRange.style.background='linear-gradient(90deg, var(--sand) '+v+'%, rgba(255,255,255,.35) '+v+'%)';};
+const updateUI=()=>{soundBtn.classList.toggle('unmuted',!videoMuted);soundBtn.setAttribute('aria-pressed',String(!videoMuted));soundBtn.querySelector('.label').textContent=videoMuted?'Activar sonido':'Silenciar';paintRange();};
+volRange.addEventListener('input',()=>{
+  const v=+volRange.value;
+  if(v>0){lastVol=v;sendCmd('setVolume',[v]);if(videoMuted){videoMuted=false;sendCmd('unMute');}}
+  else{videoMuted=true;sendCmd('mute');}
+  updateUI();
 });
+soundBtn.addEventListener('click',()=>{
+  if(videoMuted){const v=lastVol||70;volRange.value=v;sendCmd('setVolume',[v]);sendCmd('unMute');videoMuted=false;}
+  else{lastVol=+volRange.value||70;volRange.value=0;sendCmd('mute');videoMuted=true;}
+  updateUI();
+});
+updateUI();
 </script>
 </body>
 </html>
