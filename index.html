@@ -41,9 +41,9 @@ nav{display:flex;align-items:center;gap:26px;font-size:.9rem}nav a{transition:co
 .sound-control input[type=range]::-moz-range-thumb{width:15px;height:15px;border-radius:50%;background:var(--sand);border:2px solid #fff;box-shadow:0 1px 4px #00000066}
 .sound-control input[type=range]:focus-visible{box-shadow:0 0 0 3px #dfca9155}
 
-/* CARRUSEL FULL-BLEED DE EL RODEO */
+/* CARRUSEL FULL-BLEED DE EL RODEO (más alto) */
 .rodeo-section{padding:0;background:#101410}
-.rodeo-carousel{position:relative;width:100%;overflow:hidden;height:clamp(320px,62vh,640px);cursor:pointer}
+.rodeo-carousel{position:relative;width:100%;overflow:hidden;height:clamp(480px,78vh,820px);cursor:pointer}
 .rodeo-track{display:flex;height:100%;transition:transform .9s cubic-bezier(.22,.61,.36,1)}
 .rodeo-slide{flex:0 0 100%;height:100%;margin:0}
 .rodeo-slide img{width:100%;height:100%;object-fit:cover}
@@ -59,8 +59,8 @@ section{padding:88px 0}.section-head{text-align:center;max-width:700px;margin:0 
 .reservation{padding:30px;background:#fff;border-radius:8px;box-shadow:0 12px 40px #1e2a1610}.reservation h3{font:500 1.8rem Georgia,serif;margin-bottom:6px}.reservation>p{color:var(--muted);font-size:.92rem;margin-bottom:24px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}.field label{font-size:.82rem;font-weight:700}.field input,.field select,.field textarea{width:100%;padding:12px 13px;border:1px solid #d8d8ce;border-radius:5px;background:#fff;outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--forest2);box-shadow:0 0 0 3px #536c4a20}.field textarea{min-height:95px;resize:vertical}.reservation .btn{width:100%;margin-top:20px}.form-note{font-size:.75rem;color:var(--muted);margin:12px 0 0}
 footer{background:#20291e;color:#e8e9df;padding:30px 0}.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}.footer-brand{font:500 1.2rem Georgia,serif}.footer-small{font-size:.78rem;color:#bfc6b7}.social-links{display:flex;gap:18px;font-size:.85rem}
 
-@media(max-width:800px){.wrap{width:min(var(--max),calc(100% - 32px))}header{height:68px}.brand{font-size:1rem}.brand-mark{width:46px;height:62px;flex-basis:46px;padding:2px}nav{display:none;position:absolute;top:68px;left:0;right:0;padding:18px 24px 24px;background:var(--cream);box-shadow:0 12px 18px #00000012;flex-direction:column;align-items:stretch;gap:0}nav.open{display:flex}nav a{padding:12px 0;border-bottom:1px solid #e6e1d5}.nav-cta{display:none}.menu-toggle{display:block}.hero{min-height:590px;height:84svh}.sound-control{right:18px;bottom:18px;padding:8px 12px;gap:10px}.sound-control input[type=range]{width:90px}.sound-toggle{font-size:.7rem}.sound-toggle svg{width:17px;height:17px;flex-basis:17px}.rodeo-carousel{height:clamp(260px,48vh,480px)}.rodeo-badge{font-size:.62rem;padding:7px 14px}section{padding:66px 0}.story{grid-template-columns:1fr;gap:34px}.story-image{order:2}.story-image img{height:320px}.food-track,.gallery-track{grid-auto-columns:calc((100% - 18px)/2);gap:18px}.food-card img{height:220px}.gallery-track img{height:250px}.contact-grid{grid-template-columns:1fr;gap:24px}.contact-info{padding:26px}}
-@media(max-width:520px){.wrap{width:calc(100% - 28px)}.brand-mark{width:40px;height:54px;flex-basis:40px;padding:2px}.hero{min-height:560px;height:82svh}.hero-content{padding-top:55px}.eyebrow{font-size:.65rem}.hero p{font-size:.85rem;letter-spacing:.08em}.btn{padding:12px 18px;font-size:.9rem}.sound-toggle .label{display:none}.sound-control input[type=range]{width:80px}.rodeo-carousel{height:clamp(220px,42vh,420px)}section{padding:54px 0}.section-head{margin-bottom:30px}.food-track,.gallery-track{grid-auto-columns:84%;gap:14px}.food-card img{height:230px}.gallery-track img{height:260px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.contact-info{padding:24px}.reservation{padding:22px}.quote-band{padding:48px 18px}.quote-band p{font-size:1.35rem}.footer-inner{align-items:flex-start;flex-direction:column;gap:12px}}
+@media(max-width:800px){.wrap{width:min(var(--max),calc(100% - 32px))}header{height:68px}.brand{font-size:1rem}.brand-mark{width:46px;height:62px;flex-basis:46px;padding:2px}nav{display:none;position:absolute;top:68px;left:0;right:0;padding:18px 24px 24px;background:var(--cream);box-shadow:0 12px 18px #00000012;flex-direction:column;align-items:stretch;gap:0}nav.open{display:flex}nav a{padding:12px 0;border-bottom:1px solid #e6e1d5}.nav-cta{display:none}.menu-toggle{display:block}.hero{min-height:590px;height:84svh}.sound-control{right:18px;bottom:18px;padding:8px 12px;gap:10px}.sound-control input[type=range]{width:90px}.sound-toggle{font-size:.7rem}.sound-toggle svg{width:17px;height:17px;flex-basis:17px}.rodeo-carousel{height:clamp(380px,65vh,600px)}.rodeo-badge{font-size:.62rem;padding:7px 14px}section{padding:66px 0}.story{grid-template-columns:1fr;gap:34px}.story-image{order:2}.story-image img{height:320px}.food-track,.gallery-track{grid-auto-columns:calc((100% - 18px)/2);gap:18px}.food-card img{height:220px}.gallery-track img{height:250px}.contact-grid{grid-template-columns:1fr;gap:24px}.contact-info{padding:26px}}
+@media(max-width:520px){.wrap{width:calc(100% - 28px)}.brand-mark{width:40px;height:54px;flex-basis:40px;padding:2px}.hero{min-height:560px;height:82svh}.hero-content{padding-top:55px}.eyebrow{font-size:.65rem}.hero p{font-size:.85rem;letter-spacing:.08em}.btn{padding:12px 18px;font-size:.9rem}.sound-toggle .label{display:none}.sound-control input[type=range]{width:80px}.rodeo-carousel{height:clamp(320px,60vh,520px)}section{padding:54px 0}.section-head{margin-bottom:30px}.food-track,.gallery-track{grid-auto-columns:84%;gap:14px}.food-card img{height:230px}.gallery-track img{height:260px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.contact-info{padding:24px}.reservation{padding:22px}.quote-band{padding:48px 18px}.quote-band p{font-size:1.35rem}.footer-inner{align-items:flex-start;flex-direction:column;gap:12px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
 </style>
 </head>
@@ -109,11 +109,12 @@ footer{background:#20291e;color:#e8e9df;padding:30px 0}.footer-inner{display:fle
       <p>Un espacio para compartir en familia, hacer una pausa después de recorrer las sierras o disfrutar una comida rica en un ambiente relajado y natural.</p>
       <a class="btn" href="#contacto">Cómo llegar</a>
     </div>
-    <div class="story-image"><img src="assets/historia-rodeo.jpg" alt="Paisaje de El Rodeo, Catamarca"></div>
+    <!-- IMAGEN ACTUALIZADA -->
+    <div class="story-image"><img src="PAISAJERODEO.jpg" alt="Paisaje de El Rodeo, Catamarca"></div>
   </div>
 </section>
 
-<!-- CARRUSEL AUTOMÁTICO FULL-BLEED DE EL RODEO -->
+<!-- CARRUSEL AUTOMÁTICO FULL-BLEED DE EL RODEO (3 segundos, más altura) -->
 <section class="rodeo-section" aria-label="Carrusel de fotos de El Rodeo, Catamarca">
   <div class="rodeo-carousel" id="rodeo-carousel">
     <div class="rodeo-track" id="rodeo-track">
@@ -138,11 +139,12 @@ footer{background:#20291e;color:#e8e9df;padding:30px 0}.footer-inner{display:fle
     <div class="section-head"><span class="kicker">Hecho para disfrutar</span><h2>Sabores caseros y abundantes</h2><p>Platos generosos, clásicos queridos y sabores que invitan a compartir. Consultá la disponibilidad de la carta al visitarnos.</p></div>
     <div class="carousel-shell">
       <div class="food-track" id="food-track">
-        <article class="food-card"><img src="assets/milanesa.jpg" alt="Milanesas con guarnición"><div class="card-copy"><h3>Milanesas napolitanas</h3><p>Un clásico bien casero, ideal para disfrutar sin apuro.</p></div></article>
-        <article class="food-card"><img src="assets/empanadas.jpg" alt="Empanadas y guarnición"><div class="card-copy"><h3>Empanadas criollas</h3><p>Sabores tradicionales para empezar a compartir.</p></div></article>
-        <article class="food-card"><img src="assets/plato-casero.jpg" alt="Plato casero abundante"><div class="card-copy"><h3>Platos abundantes</h3><p>Opciones caseras para disfrutar en buena compañía.</p></div></article>
-        <article class="food-card"><img src="assets/picada.jpg" alt="Comida para compartir"><div class="card-copy"><h3>Para compartir</h3><p>Una mesa llena de sabores y buenos momentos.</p></div></article>
-        <article class="food-card"><img src="assets/guiso.jpg" alt="Guiso tradicional servido en cazuela"><div class="card-copy"><h3>Guisos tradicionales</h3><p>Calidez y sabor en cada cucharada.</p></div></article>
+        <!-- IMÁGENES ACTUALIZADAS -->
+        <article class="food-card"><img src="MILANESARODEO.jpg" alt="Milanesas napolitanas"><div class="card-copy"><h3>Milanesas napolitanas</h3><p>Un clásico bien casero, ideal para disfrutar sin apuro.</p></div></article>
+        <article class="food-card"><img src="EMPANADARODEO.jpg" alt="Empanadas criollas"><div class="card-copy"><h3>Empanadas criollas</h3><p>Sabores tradicionales para empezar a compartir.</p></div></article>
+        <article class="food-card"><img src="ABUNDANTERODEO.jpg" alt="Platos abundantes"><div class="card-copy"><h3>Platos abundantes</h3><p>Opciones caseras para disfrutar en buena compañía.</p></div></article>
+        <article class="food-card"><img src="COMPARTIRRODEO.jpg" alt="Comida para compartir"><div class="card-copy"><h3>Para compartir</h3><p>Una mesa llena de sabores y buenos momentos.</p></div></article>
+        <article class="food-card"><img src="GUISORODEO.jpg" alt="Guiso tradicional"><div class="card-copy"><h3>Guisos tradicionales</h3><p>Calidez y sabor en cada cucharada.</p></div></article>
       </div>
       <div class="carousel-controls"><button class="round-btn" data-target="food-track" data-dir="-1" aria-label="Platos anteriores">←</button><button class="round-btn" data-target="food-track" data-dir="1" aria-label="Más platos">→</button></div>
     </div>
@@ -176,7 +178,8 @@ footer{background:#20291e;color:#e8e9df;padding:30px 0}.footer-inner{display:fle
         <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Las+Maravillas+El+Rodeo+Catamarca" target="_blank" rel="noopener">Cómo llegar ↗</a>
         <iframe class="map" title="Mapa de El Rodeo, Catamarca" loading="lazy" src="https://maps.google.com/maps?q=El%20Rodeo%2C%20Catamarca%2C%20Argentina&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
       </div>
-      <form class="reservation" id="reservation-form">
+      <!-- FORMULARIO: id="reservas" para que el botón "Reservá tu mesa" haga scroll hasta acá -->
+      <form class="reservation" id="reservas">
         <h3>Reservá tu mesa</h3><p>Completá los datos y prepararemos un mensaje para coordinar tu visita por WhatsApp.</p>
         <div class="form-grid">
           <div class="field"><label for="nombre">Nombre</label><input id="nombre" name="nombre" autocomplete="name" placeholder="Tu nombre" required></div>
@@ -200,7 +203,9 @@ const toggle=document.getElementById('menu-toggle'),nav=document.getElementById(
 toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'×':'☰';});
 nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.textContent='☰';}));
 document.querySelectorAll('[data-target][data-dir]').forEach(btn=>btn.addEventListener('click',()=>{const track=document.getElementById(btn.dataset.target);track.scrollBy({left:track.clientWidth*.82*Number(btn.dataset.dir),behavior:'smooth'});}));
-document.getElementById('reservation-form').addEventListener('submit',e=>{e.preventDefault();const f=new FormData(e.currentTarget);const lines=['Hola, Casa Villafañez. Quisiera consultar una reserva:','Nombre: '+f.get('nombre'),'Teléfono: '+(f.get('telefono')||'No indicado'),'Fecha: '+f.get('fecha'),'Horario: '+f.get('hora'),'Personas: '+f.get('personas'),'Preferencia: '+f.get('tipo'),'Mensaje: '+(f.get('mensaje')||'Sin mensaje')];const phone='543815439476';window.open('https://wa.me/'+phone+'?text='+encodeURIComponent(lines.join('\n')),'_blank','noopener');});
+
+/* Formulario WhatsApp (actualizado al nuevo id="reservas") */
+document.getElementById('reservas').addEventListener('submit',e=>{e.preventDefault();const f=new FormData(e.currentTarget);const lines=['Hola, Casa Villafañez. Quisiera consultar una reserva:','Nombre: '+f.get('nombre'),'Teléfono: '+(f.get('telefono')||'No indicado'),'Fecha: '+f.get('fecha'),'Horario: '+f.get('hora'),'Personas: '+f.get('personas'),'Preferencia: '+f.get('tipo'),'Mensaje: '+(f.get('mensaje')||'Sin mensaje')];const phone='543815439476';window.open('https://wa.me/'+phone+'?text='+encodeURIComponent(lines.join('\n')),'_blank','noopener');});
 
 /* ===== VIDEO DE FONDO: API oficial de YouTube, calidad highres forzada y re-pedida ===== */
 const VIDEO_ID='lQ88wtf7eUc';
@@ -242,7 +247,7 @@ soundBtn.addEventListener('click',()=>{
 });
 updateUI();
 
-/* ===== CARRUSEL AUTOMÁTICO DE EL RODEO (se detiene al apretar una imagen) ===== */
+/* ===== CARRUSEL AUTOMÁTICO DE EL RODEO (3 segundos, se detiene al apretar una imagen) ===== */
 (function(){
   const carousel=document.getElementById('rodeo-carousel');
   const track=document.getElementById('rodeo-track');
@@ -251,7 +256,8 @@ updateUI();
   const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   let idx=0,timer=null,userStopped=reduceMotion,inView=true;
   const go=i=>{idx=(i+total)%total;track.style.transform='translateX(-'+(idx*100)+'%)';};
-  const setTimer=on=>{clearInterval(timer);timer=on?setInterval(()=>go(idx+1),4500):null;};
+  /* Intervalo cambiado a 3000 ms (3 segundos) */
+  const setTimer=on=>{clearInterval(timer);timer=on?setInterval(()=>go(idx+1),3000):null;};
   const sync=()=>{badge.hidden=!userStopped;setTimer(!userStopped&&inView);};
   carousel.addEventListener('click',()=>{userStopped=!userStopped;sync();});
   if('IntersectionObserver' in window){
