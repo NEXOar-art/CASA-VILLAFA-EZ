@@ -51,9 +51,19 @@ nav{display:flex;align-items:center;gap:26px;font-size:.9rem}nav a{transition:co
 .rodeo-slide img{width:100%;height:100%;object-fit:cover}
 .rodeo-badge{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);background:#000000a8;color:#fff;border:1px solid #ffffff55;border-radius:999px;padding:8px 18px;font-size:.72rem;font-weight:650;letter-spacing:.1em;text-transform:uppercase;backdrop-filter:blur(8px);pointer-events:none;white-space:nowrap}
 
-/* RESTO DE SECCIONES (sin cambios) */
+/* RESTO DE SECCIONES */
 section{padding:88px 0}.section-head{text-align:center;max-width:700px;margin:0 auto 42px}.kicker{font-size:.75rem;text-transform:uppercase;letter-spacing:.2em;color:var(--forest2);font-weight:800}.section-head h2,.story-copy h2{font-family:Georgia,serif;font-weight:500;font-size:clamp(2.25rem,4.5vw,3.6rem);line-height:1.08;margin:10px 0 14px}.section-head p{color:var(--muted);margin-bottom:0}
-.story{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:64px}.story-image{position:relative}.story-image img{width:100%;height:430px;object-fit:cover;border-radius:6px;box-shadow:20px 20px 0 #dfca914f}.story-copy p{color:var(--muted)}.story-copy .btn{margin-top:10px}
+
+/* HISTORIA — título más largo con tamaño ajustado */
+.story{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:64px}
+.story-image{position:relative}
+.story-image img{width:100%;height:430px;object-fit:cover;border-radius:6px;box-shadow:20px 20px 0 #dfca914f}
+.story-copy h2{font-size:clamp(1.8rem,3.2vw,2.6rem);line-height:1.15;margin:10px 0 18px}
+.story-copy p{color:var(--muted);margin-bottom:14px}
+.story-copy p:last-of-type{margin-bottom:18px}
+.story-copy .highlight{color:var(--forest2);font-style:italic;margin-top:20px}
+.story-copy .btn{margin-top:10px}
+
 .menu-section{background:#fff}.carousel-shell{position:relative}.food-track,.gallery-track{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 60px)/3);gap:30px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:var(--forest2) #e8e5dc;padding:0 0 18px;scroll-behavior:smooth}.food-card{scroll-snap-align:start;background:var(--cream);border-radius:8px;overflow:hidden}.food-card img{width:100%;height:250px;object-fit:cover;transition:transform .4s}.food-card:hover img{transform:scale(1.04)}.food-card .card-copy{padding:20px 20px 22px}.food-card h3{font:500 1.35rem Georgia,serif;margin-bottom:8px}.food-card p{color:var(--muted);font-size:.93rem;margin:0}.carousel-controls{display:flex;justify-content:center;gap:10px;margin-top:22px}.round-btn{width:44px;height:44px;border:1px solid #c9cbbf;border-radius:50%;background:transparent;color:var(--forest);font-size:1.2rem;cursor:pointer}.round-btn:hover{background:var(--forest);color:#fff}
 .quote-band{padding:64px 0;background:var(--forest);color:#fff;text-align:center}.quote-band p{font:italic 1.7rem Georgia,serif;max-width:760px;margin:0 auto 14px}.quote-band span{color:#e2d2a5;text-transform:uppercase;font-size:.73rem;letter-spacing:.2em}
 .gallery-section{background:#eae7dc}.gallery-track{grid-auto-columns:calc((100% - 48px)/3);gap:24px}.gallery-track img{width:100%;height:300px;object-fit:cover;border-radius:5px;scroll-snap-align:start}.gallery-track figure{margin:0;scroll-snap-align:start}.gallery-track figcaption{font-size:.86rem;color:var(--muted);padding-top:10px}
@@ -66,7 +76,7 @@ footer{background:#20291e;color:#e8e9df;padding:30px 0}.footer-inner{display:fle
 .footer-location:hover{color:#fff}
 .footer-location svg{width:18px;height:18px;fill:currentColor;flex:0 0 18px}
 
-@media(max-width:800px){.wrap{width:min(var(--max),calc(100% - 32px))}header{height:68px}.brand{font-size:1rem}.brand-mark{width:46px;height:62px;flex-basis:46px;padding:2px}nav{display:none;position:absolute;top:68px;left:0;right:0;padding:18px 24px 24px;background:var(--cream);box-shadow:0 12px 18px #00000012;flex-direction:column;align-items:stretch;gap:0}nav.open{display:flex}nav a{padding:12px 0;border-bottom:1px solid #e6e1d5}.nav-cta{display:none}.menu-toggle{display:block}.hero{min-height:620px;padding:48px 0}.hero-content{gap:16px}.video-frame{width:100%;border-radius:10px}.sound-control{padding:8px 12px;gap:10px}.sound-control input[type=range]{width:100px}.sound-toggle{font-size:.7rem}.sound-toggle svg{width:17px;height:17px;flex-basis:17px}.rodeo-carousel{height:clamp(480px,75vh,720px)}.rodeo-badge{font-size:.62rem;padding:7px 14px}section{padding:66px 0}.story{grid-template-columns:1fr;gap:34px}.story-image{order:2}.story-image img{height:320px}.food-track,.gallery-track{grid-auto-columns:calc((100% - 18px)/2);gap:18px}.food-card img{height:220px}.gallery-track img{height:250px}.contact-grid{grid-template-columns:1fr;gap:24px}.contact-info{padding:26px}}
+@media(max-width:800px){.wrap{width:min(var(--max),calc(100% - 32px))}header{height:68px}.brand{font-size:1rem}.brand-mark{width:46px;height:62px;flex-basis:46px;padding:2px}nav{display:none;position:absolute;top:68px;left:0;right:0;padding:18px 24px 24px;background:var(--cream);box-shadow:0 12px 18px #00000012;flex-direction:column;align-items:stretch;gap:0}nav.open{display:flex}nav a{padding:12px 0;border-bottom:1px solid #e6e1d5}.nav-cta{display:none}.menu-toggle{display:block}.hero{min-height:620px;padding:48px 0}.hero-content{gap:16px}.video-frame{width:100%;border-radius:10px}.sound-control{padding:8px 12px;gap:10px}.sound-control input[type=range]{width:100px}.sound-toggle{font-size:.7rem}.sound-toggle svg{width:17px;height:17px;flex-basis:17px}.rodeo-carousel{height:clamp(480px,75vh,720px)}.rodeo-badge{font-size:.62rem;padding:7px 14px}section{padding:66px 0}.story{grid-template-columns:1fr;gap:34px}.story-image{order:2}.story-image img{height:320px}.story-copy h2{font-size:clamp(1.6rem,4.5vw,2.2rem)}.food-track,.gallery-track{grid-auto-columns:calc((100% - 18px)/2);gap:18px}.food-card img{height:220px}.gallery-track img{height:250px}.contact-grid{grid-template-columns:1fr;gap:24px}.contact-info{padding:26px}}
 @media(max-width:520px){.wrap{width:calc(100% - 28px)}.brand-mark{width:40px;height:54px;flex-basis:40px;padding:2px}.hero{min-height:580px;padding:40px 0}.hero-content{padding-top:55px;gap:14px}.eyebrow{font-size:.65rem}.hero p{font-size:.85rem;letter-spacing:.08em}.btn{padding:12px 18px;font-size:.9rem}.sound-toggle .label{display:none}.sound-control input[type=range]{width:90px}.video-frame{border-radius:8px}.rodeo-carousel{height:clamp(380px,70vh,620px)}section{padding:54px 0}.section-head{margin-bottom:30px}.food-track,.gallery-track{grid-auto-columns:84%;gap:14px}.food-card img{height:230px}.gallery-track img{height:260px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.contact-info{padding:24px}.reservation{padding:22px}.quote-band{padding:48px 18px}.quote-band p{font-size:1.35rem}.footer-inner{align-items:flex-start;flex-direction:column;gap:12px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
 </style>
@@ -111,11 +121,17 @@ footer{background:#20291e;color:#e8e9df;padding:30px 0}.footer-inner{display:fle
   <a class="scroll-hint" href="#historia">Deslizá para descubrir ↓</a>
 </section>
 
+<!-- SECCIÓN HISTORIA: texto actualizado -->
 <section id="historia">
   <div class="wrap story">
-    <div class="story-copy"><span class="kicker">Un lugar para volver</span><h2>La calidez de lo nuestro</h2>
-      <p>En el corazón de El Rodeo, Catamarca, Casa Villafañez te invita a disfrutar de la cocina casera, la hospitalidad del Norte Argentino y esos encuentros que se alargan alrededor de una buena mesa.</p>
-      <p>Un espacio para compartir en familia, hacer una pausa después de recorrer las sierras o disfrutar una comida rica en un ambiente relajado y natural.</p>
+    <div class="story-copy">
+      <span class="kicker">Un lugar para volver</span>
+      <h2>Casa Villafañez: Tradición, historia y encuentro en El Rodeo</h2>
+      <p>En Las Maravillas S/N, El Rodeo, Catamarca, se encuentra Casa Villafañez, un histórico bar, restaurante, panadería y hostería que ha acompañado la vida de la villa durante más de un siglo.</p>
+      <p>Fundada a principios del siglo XX por Antonia y Jacobo Villafañez, esta tradicional casa nació con el espíritu de recibir a viajeros, vecinos y familias que elegían El Rodeo para disfrutar de su entorno y su tranquilidad. Con el paso de los años, se convirtió en un lugar emblemático, donde la gastronomía, la hospitalidad y las historias compartidas forman parte de su esencia.</p>
+      <p>Hoy, el legado familiar continúa a través de sus nietos, Adán y Fernando Villafañez, quienes mantienen viva una tradición que ha trascendido generaciones, consolidando a Casa Villafañez como un ícono cultural y un punto de encuentro social de la localidad.</p>
+      <p>Con más de 100 años de trayectoria, Casa Villafañez no es solo un establecimiento histórico, sino también un símbolo de identidad y pertenencia para quienes visitan y aman El Rodeo. Sus puertas siguen abiertas para recibir a cada visitante con la misma calidez que la distingue desde sus orígenes.</p>
+      <p class="highlight">✨ Casa Villafañez, más de un siglo de historia al servicio de quienes descubren y disfrutan El Rodeo, Catamarca.</p>
       <a class="btn" href="#contacto">Cómo llegar</a>
     </div>
     <div class="story-image"><img src="PAISAJERODEO.jpg" alt="Paisaje de El Rodeo, Catamarca"></div>
@@ -163,7 +179,6 @@ footer{background:#20291e;color:#e8e9df;padding:30px 0}.footer-inner{display:fle
   <div class="wrap">
     <div class="section-head"><span class="kicker">Conocé nuestro espacio</span><h2>El ambiente</h2><p>Un rincón rodeado de verde, con el encanto tranquilo de El Rodeo.</p></div>
     <div class="gallery-track" id="gallery-track">
-      <!-- IMÁGENES ACTUALIZADAS -->
       <figure><img src="FACHADAVILLA.jpg" alt="Fachada del restaurante"><figcaption>La casa</figcaption></figure>
       <figure><img src="ENTRADAVILLA.jpg" alt="Entrada de Casa Villafañez"><figcaption>Bienvenidos</figcaption></figure>
       <figure><img src="VISTAVILLA.jpg" alt="Vista exterior entre árboles"><figcaption>Entre árboles</figcaption></figure>
@@ -210,7 +225,6 @@ footer{background:#20291e;color:#e8e9df;padding:30px 0}.footer-inner{display:fle
       <div class="footer-small">Bar Restaurante · El Rodeo, Catamarca</div>
     </div>
     <div class="footer-small">Tradición, sabor y encuentros en el Norte Argentino.</div>
-    <!-- UBICACIÓN CON ICONO -->
     <a class="footer-location" href="https://maps.app.goo.gl/CRK28nShEg3Utrsp6" target="_blank" rel="noopener" aria-label="Ver ubicación en Google Maps">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
       Ver ubicación en Maps
